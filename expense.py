@@ -1,4 +1,24 @@
 from storage import load_data, save_data
+from datetime import datetime
+from typing import List, Dict
+
+class Expense:
+    def __init__(self, amount: float, category: str, description: str, expense_type: str):
+        # Private Variable
+        self._amount = amount
+        self.category = category
+        self.description = description
+        self.type = expense_type
+        self.date = datetime.now().strftime("%Y-%m-%d")
+        
+    def to_dict(self) -> Dict:
+        return {
+            "amount": self._amount,
+            "category": self.category,
+            "description": self.description,
+            "type": self.type,
+            "date": self.date
+        }
 
 def add_expense(amount, category, description, expense_type):
     data = load_data()
