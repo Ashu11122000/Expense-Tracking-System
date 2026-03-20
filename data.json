@@ -1,0 +1,14 @@
+[
+    {
+        "amount": 2000.0,
+        "category": "Food",
+        "description": "Ate full veg meal lunch",
+        "type": "expense"
+    },
+    {
+        "amount": 50000.0,
+        "category": "Income",
+        "description": " I got my salary",
+        "type": "income"
+    }
+]
